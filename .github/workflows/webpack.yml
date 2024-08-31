@@ -22,15 +22,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
-
     - name: Build
-      run: npx webpack
+      run: |
+        npm install
+        npx webpack
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_TOKEN }}
         publish_dir: ./dist
         publish_branch: gh-pages
