@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System-specific files
+*.swp
+*.swo
