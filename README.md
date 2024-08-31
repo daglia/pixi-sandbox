@@ -1,3 +1,10 @@
+<div align="center">
+  <img src="https://github.com/daglia/pixi-sandbox/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment">
+</div>
+<div align="center">
+  <img src="https://github.com/daglia/pixi-sandbox/blob/main/src/assets/images/hello-world/ladybug.png" alt="ladybug">
+</div>
+
 This is a playground project for myself to learn [PixiJS](https://pixijs.com/), a HTML5 creation engine.
 
 I'm planning to learn to **game development basics** and how to make them work with browsers. The project uses **webpack** in order to organize and bundle.
