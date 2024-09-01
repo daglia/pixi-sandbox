@@ -6,6 +6,7 @@ export default class Button extends Container {
     super();
 
     this.interactive = true;
+    this.pressed = false;
     this.sound = Sound.from("assets/sounds/button_click.mp3");
 
     this.defaultOptions = {
@@ -61,12 +62,14 @@ export default class Button extends Container {
 
   setupInteractivity() {
     this.on("pointerdown", () => {
-      this.y += 4;
+      if (!this.pressed) this.y += 4;
+      this.pressed = true;
       this.sound.play();
     });
 
     this.on("pointerup", () => {
-      this.y -= 4;
+      if (this.pressed) this.y -= 4;
+      this.pressed = false;
       this.defaultOptions.onClick();
     });
 
@@ -76,6 +79,8 @@ export default class Button extends Container {
     });
 
     this.on("pointerout", () => {
+      if (this.pressed) this.y -= 4;
+      this.pressed = false;
       this.background.tint = null;
     });
   }
